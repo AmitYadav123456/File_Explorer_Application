@@ -205,7 +205,7 @@ theme: {
   extend: {
     colors: {
       primary: {
-        500: '#your-color', // Change primary color
+        500: '#your-color', 
       }
     }
   }
@@ -221,7 +221,7 @@ export const initialData = {
   name: 'My Files',
   type: 'folder',
   children: [
-    // Add your custom structure
+    
   ]
 };
 ```
@@ -231,7 +231,7 @@ export const initialData = {
 Edit `src/utils/helpers.js`:
 ```javascript
 export const isValidName = (name) => {
-  // Customize validation regex
+  
   return /^[a-zA-Z0-9._\s-]+$/.test(name);
 };
 ```
@@ -240,8 +240,8 @@ export const isValidName = (name) => {
 
 Each component uses Tailwind utility classes. Example:
 ```javascript
-// Change selection color in TreeNode.js
-className="bg-blue-100" // Change to bg-green-100, bg-purple-100, etc.
+
+className="bg-blue-100" 
 ```
 
 ## 🔍 State Management
@@ -267,14 +267,14 @@ const {
   viewing,
   editing,
   error,
-  toggleExpand,    // Toggle folder expand/collapse
-  setSelected,     // Set selected item
-  setViewing,      // Set file being viewed
-  setEditing,      // Set item being edited
-  setError,        // Set error message
-  createItem,      // Create new file/folder
-  deleteItem,      // Delete item
-  renameItem       // Rename item
+  toggleExpand,    
+  setSelected,     
+  setViewing,      
+  setEditing,      
+  setError,        
+  createItem,      
+  deleteItem,      
+  renameItem       
 } = useFileSystem();
 ```
 
@@ -321,10 +321,10 @@ const {
 
 ### Code Optimization
 ```javascript
-// Memoize TreeNode for better performance
+
 import { memo } from 'react';
 const TreeNode = memo(({ item, depth }) => {
-  // component code
+  
 });
 ```
 
@@ -346,57 +346,6 @@ const TreeNode = memo(({ item, depth }) => {
 - [ ] Confirm rename with Enter
 - [ ] Delete root folder (should fail)
 
-### Test Cases for Development
-```javascript
-// Example test structure (using Jest/React Testing Library)
-describe('FileExplorer', () => {
-  test('creates new folder', () => {});
-  test('renames item', () => {});
-  test('deletes item', () => {});
-  test('searches files', () => {});
-  test('views file content', () => {});
-});
-```
-
-## 🚀 Deployment
-
-### Build for Production
-```bash
-npm run build
-```
-
-### Deploy to Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Deploy to Netlify
-```bash
-npm run build
-# Drag and drop the 'build' folder to Netlify
-```
-
-### Deploy to GitHub Pages
-```bash
-npm install --save-dev gh-pages
-```
-
-Add to package.json:
-```json
-{
-  "homepage": "https://yourusername.github.io/file-explorer",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  }
-}
-```
-
-Then deploy:
-```bash
-npm run deploy
-```
 
 ## 🎓 Learning Resources
 
@@ -413,94 +362,4 @@ npm run deploy
 - Responsive design with breakpoints
 - Custom colors and themes
 - Hover and focus states
-- Transitions and animations
 
-## 🛣️ Roadmap / Future Enhancements
-
-- [ ] Drag-and-drop file reorganization
-- [ ] File upload from computer
-- [ ] Download files functionality
-- [ ] Multiple file selection (Ctrl+Click)
-- [ ] Context menu (right-click options)
-- [ ] Keyboard navigation (arrow keys)
-- [ ] File type icons (PDF, JS, CSS, etc.)
-- [ ] Copy/paste functionality
-- [ ] Breadcrumb navigation
-- [ ] Dark mode toggle
-- [ ] Folder size calculation
-- [ ] Sort options (name, date, size, type)
-- [ ] Grid view option
-- [ ] Recent files section
-- [ ] Favorites/bookmarks
-- [ ] Undo/Redo operations
-- [ ] File preview for images
-- [ ] Code syntax highlighting
-- [ ] Export/Import file structure
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Coding Standards
-- Use functional components
-- Follow the existing file structure
-- Add comments for complex logic
-- Test thoroughly before submitting
-- Update README for new features
-- Use meaningful commit messages
-
-## 📄 License
-
-MIT License
-
-Copyright (c) 2024 [Your Name]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
-
-## 🙏 Acknowledgments
-
-- **React Team** - For the amazing framework
-- **Tailwind Labs** - For Tailwind CSS
-- **Lucide** - For beautiful icons
-- **Create React App** - For project setup
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/file-explorer/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/file-explorer/discussions)
-- **Email**: support@example.com
-
-## 📊 Project Stats
-
-- **Language**: JavaScript (React)
-- **Styling**: Tailwind CSS
-- **State Management**: React Context API
-- **Icons**: Lucide React
-- **Build Tool**: Create React App
-
----
-
-⭐ **Star this repo if you find it helpful!**
-
-Made with ❤️ using React and Tailwind CSS
